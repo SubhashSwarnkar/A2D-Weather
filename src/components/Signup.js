@@ -160,8 +160,7 @@ export default function Signup() {
           <div>
             <p className="text-center">
               Already have an Account ?
-              <Link to="/login">Login</Link>
-
+              <a href="/login">Login</a>
             </p>
           </div>
         </form>
