@@ -29,20 +29,20 @@ export default function Home() {
     });
   }, [token]);
 
-  // const handleCityWeather = (cityId) => {
-  //   axios.get(`https://hiring-test.a2dweb.com/live-weather/${cityId}`, {
-  //     headers: {
-  //       'accept': 'application/json',
-  //       'Authorization': `Bearer ${token}`
-  //     }
-  //   })
-  //   .then(response => {
-  //     setWeather(response.data.data);
-  //   })
-  //   .catch(error => {
-  //     console.error('Error fetching the weather data:', error.response ? error.response.data : error.message);
-  //   });
-  // }
+  const handleCityWeather = (cityId) => {
+    axios.get(`https://hiring-test.a2dweb.com/live-weather/${cityId}`, {
+      headers: {
+        'accept': 'application/json',
+        'Authorization': `Bearer ${token}`
+      }
+    })
+    .then(response => {
+      setWeather(response.data.data);
+    })
+    .catch(error => {
+      console.error('Error fetching the weather data:', error.response ? error.response.data : error.message);
+    });
+  }
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -81,11 +81,11 @@ export default function Home() {
               </div>
               {cities.map(city => (
                 // <a className='py-3 text-nowrap text-capitalize text-center fs-6 d-flex justify-content-between align-items-center' id='nav-dropdown' onClick={() => handleCityWeather(city._id)} key={city._id}>
-                <>
+                <div onClick={() => handleCityWeather(city._id)} key={city._id}>
                 {city.name}
                   <span className="text-end fs-6">{city.maxTemperature}°/{city.minTemperature}°</span>
                 {/* // </a> */}
-                </>  
+                </div>  
               ))}
             </div>
           </div>

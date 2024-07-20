@@ -68,7 +68,11 @@ export default function Login() {
             <button type="submit" className="btn btn-block create-account">Login</button>
           </div>
           <div>
-            <p className="text-center mt-5 pt-5">Don’t have an account?<a href='/'>Signup</a></p>
+            <p className="text-center mt-5 pt-5">Don’t have an account?
+              {/* <a href='/'>
+              Signup
+              </a> */}
+              </p>
           </div>
         </form>
       </div>

@@ -152,12 +152,15 @@ export default function Signup() {
           {message && <p className="text-center mt-3">{message}</p>}
           <div>
             <p className="text-center">
-              By registering you agree to the Forcasting.<a href="/">Terms of Use</a> and <a href="/">Privacy Policy.</a>
+              By registering you agree to the Forcasting.
+              {/* <a href="/">Terms of Use</a> */}
+               and <a href="/">Privacy Policy.</a>
             </p>
           </div>
           <div>
             <p className="text-center">
-              Already have an Account ?<a href="/login">Login</a>
+              Already have an Account ?
+              {/* <a href="/login">Login</a> */}
             </p>
           </div>
         </form>
