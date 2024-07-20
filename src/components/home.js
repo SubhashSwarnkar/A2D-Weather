@@ -71,7 +71,9 @@ export default function Home() {
         </div>
         <div>
           <div className="dropdown px-5">
-            <button className='button active'><a href="#">Locations</a></button>
+            <button className='button active'>
+              {/* <a href="#">Locations</a> */}
+              </button>
             <div className="dropdown-content active button ">
               <div className="search-container ">
                 <input type="text" placeholder="Search for something..." />
@@ -93,8 +95,8 @@ export default function Home() {
         <div>
           <div className="sidebar">
             <h5 className='container'>Main</h5>
-            <a href="/home" className="active button my-4">Dashboard</a>
-            <a className='active button' href="/forecast">Forecast report</a>
+            {/* <a href="/home" className="active button my-4">Dashboard</a>
+            <a className='active button' href="/forecast">Forecast report</a> */}
             <div className='py-5 my-5'>
               <img className='mobile-img' src={mobile} alt="Logo" />
               <button className='btn-primary btn'>Upgrade to Pro</button>
