@@ -29,20 +29,20 @@ export default function Home() {
     });
   }, [token]);
 
-  const handleCityWeather = (cityId) => {
-    axios.get(`https://hiring-test.a2dweb.com/live-weather/${cityId}`, {
-      headers: {
-        'accept': 'application/json',
-        'Authorization': `Bearer ${token}`
-      }
-    })
-    .then(response => {
-      setWeather(response.data.data);
-    })
-    .catch(error => {
-      console.error('Error fetching the weather data:', error.response ? error.response.data : error.message);
-    });
-  }
+  // const handleCityWeather = (cityId) => {
+  //   axios.get(`https://hiring-test.a2dweb.com/live-weather/${cityId}`, {
+  //     headers: {
+  //       'accept': 'application/json',
+  //       'Authorization': `Bearer ${token}`
+  //     }
+  //   })
+  //   .then(response => {
+  //     setWeather(response.data.data);
+  //   })
+  //   .catch(error => {
+  //     console.error('Error fetching the weather data:', error.response ? error.response.data : error.message);
+  //   });
+  // }
 
   useEffect(() => {
     const intervalId = setInterval(() => {
