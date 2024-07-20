@@ -67,7 +67,7 @@ export default function Home() {
       <div className="navbar">
         <div>
           <img src={logo} alt="Logo" />
-          <a>Forecasting</a>
+          {/* <a>Forecasting</a> */}
         </div>
         <div>
           <div className="dropdown px-5">
@@ -80,10 +80,12 @@ export default function Home() {
                 <button>Search</button>
               </div>
               {cities.map(city => (
-                <a className='py-3 text-nowrap text-capitalize text-center fs-6 d-flex justify-content-between align-items-center' id='nav-dropdown' onClick={() => handleCityWeather(city._id)} key={city._id}>
-                  {city.name}
+                // <a className='py-3 text-nowrap text-capitalize text-center fs-6 d-flex justify-content-between align-items-center' id='nav-dropdown' onClick={() => handleCityWeather(city._id)} key={city._id}>
+                <>
+                {city.name}
                   <span className="text-end fs-6">{city.maxTemperature}°/{city.minTemperature}°</span>
-                </a>
+                {/* // </a> */}
+                </>  
               ))}
             </div>
           </div>
